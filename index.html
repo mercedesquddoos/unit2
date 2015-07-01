@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mobile First Website</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 </head>
-<body style="padding-top:50px;">
+<body onload="javascript:getTasks()" style="padding-top:50px;">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -26,12 +27,23 @@
 		</ul>
 </nav>			
 	<div class="container">
-	<div style="padding: 40px 15px; text-align:center;">
-	<h1>Hello World</h1>
-	<p class="lead"> This is my hello world app.</p>
-	</div>
+	<div class="itt_main">
+		<label class="input-group">
+			<input class="form-control" id="newTask" type="text" placeholder="New Task"></input>
+	<span class="input-group-btn">
+	<button onclick="javascript:addTask()" class="btn btn-primary" type="button">Add</button>
+	</span
+	</label>
+	
  </div>
+ 
+	<div class="container">
+		<ul id="listTask" class="list-group">
+		</ul>
+	</div>
 	<script src="js/jquery-2.1.4.js"></script>
-	<script src="js/bootstrap.js"</script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/application.js"></script>
+	
 </body>
 </html>
